@@ -1,0 +1,14 @@
+{
+    "title": "Carlos Hernandez corvées à faire",
+    "title_task": "Corvées à faire",
+    "taskname": "Nom du devoir",
+    "taskdescription": "Description de la tâche",
+    "taskisdone":"Devoirs terminés",
+
+    "buttonsavelabel": "Sauvegarder",
+
+    "error_validate_taskname":"Le nom de la tâche ne peut pas être vide",
+
+    "modify": "Modifier",
+    "greetings": "Salut {username}"
+}
