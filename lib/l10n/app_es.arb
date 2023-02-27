@@ -1,0 +1,14 @@
+{
+    "title": "Carlos Hernandez Tareas por hacer",
+    "title_task": "Tarea por hacer",
+    "taskname": "Nombre de la tarea",
+    "taskdescription": "Descripcion de la tarea",
+    "taskisdone":"Tarea completa",
+
+    "buttonsavelabel": "Guardar",
+
+    "error_validate_taskname":"El nombre de la tarea no puede estar vacio",
+
+    "modify": "Modificar",
+    "greetings": "Hola {username}"
+}

@@ -1,0 +1,47 @@
+{
+    "title": "Carlos Hernandez ToDo App",
+    "@title": {
+        "description": "The title of the app"
+    },
+    "title_task": "ToDo Task",
+    "@title_task": {
+        "description": "The title for the ToDo Task screen"
+    },
+    "taskname": "Task name",
+    "@task name": {
+        "description": "Task name label"
+    },
+    "taskdescription": "Task description",
+    "@task description": {
+        "description": "Task description label"
+    },
+    "taskisdone":"Task is done",
+    "@taskisdone": {
+        "description": "Task is completed"
+    },
+
+    "buttonsavelabel": "Save",
+    "@button save label": {
+        "description": "Button save label"
+    },
+
+
+    "error_validate_taskname":"The task name can't be empty",
+    "@error_validate_taskname": {
+        "description": "Error message for empty task name"
+    },
+
+    "modify": "Modify",
+    "@modify": {
+        "description": "Label to modify task"
+    },
+    "greetings": "Hello {username}",
+    "@greetings": {
+        "description": "A welcome message",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    }
+}
