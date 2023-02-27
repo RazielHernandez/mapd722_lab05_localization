@@ -20,7 +20,7 @@ class taskDatabase {
     );
   }*/
 
-  Future<Database> initializeDB() async {
+  static Future<Database> initializeDB() async {
     String path = await getDatabasesPath();
     return openDatabase(
       join(path, 'tasks.db'),
@@ -33,47 +33,50 @@ class taskDatabase {
     );
   }
 
-  Future<void> saveTask(Task task) async {
+  static Future<void> saveTask(Task task) async {
     final db = await initializeDB();
 
     await db.insert(
-      'dogs',
+      'tasks',
       task.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
   } 
 
-  // A method that retrieves all the dogs from the dogs table.
-  Future<List<Task>> tasks() async {
+  // A method that retrieves all the tasks from the tasks table.
+  static Future<List<Task>> tasks() async {
     // Get a reference to the database.
     final db = await initializeDB();
 
-    // Query the table for all The Dogs.
+    // Query the table for all The Task.
     final List<Map<String, dynamic>> maps = await db.query('tasks');
 
-    // Convert the List<Map<String, dynamic> into a List<Dog>.
+    // Convert the List<Map<String, dynamic> into a List<Task>.
     return List.generate(maps.length, (i) {
+
+
+
       return Task(
         id: maps[i]['id'],
         title: maps[i]['title'],
         description: maps[i]['description'],
         category: maps[i]['category'],
-        isDone: maps[i]['status'],
+        isDone: maps[i]['status'] == 1 ? true : false,
       );
     });
   }
 
-  Future<void> updateTask(Task task) async {
+  static Future<void> updateTask(Task task) async {
     // Get a reference to the database.
     final db = await initializeDB();
 
-    // Update the given Dog.
+    // Update the given Task.
     await db.update(
       'tasks',
       task.toMap(),
       // Ensure that the Dog has a matching id.
       where: 'id = ?',
-      // Pass the Dog's id as a whereArg to prevent SQL injection.
+      // Pass the Task's id as a whereArg to prevent SQL injection.
       whereArgs: [task.id],
     );
   }

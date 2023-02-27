@@ -20,7 +20,7 @@ class Task {
       'title': title,
       'description': description,
       'category': category,
-      'isdone': isDone
+      'status': isDone
     };
   }
 
